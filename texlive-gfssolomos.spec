@@ -1,18 +1,12 @@
-# revision 18651
-# category Package
-# catalog-ctan /fonts/greek/gfs/gfssolomos
-# catalog-date 2008-08-19 21:00:04 +0200
-# catalog-license ofl
-# catalog-version 1.0
 Name:		texlive-gfssolomos
-Version:	1.0
-Release:	11
+Version:	18651
+Release:	1
 Summary:	A Greek-alphabet font
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/gfs/gfssolomos
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gfssolomos.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gfssolomos.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gfssolomos.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gfssolomos.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ calligraphically-inspired font of the mid-19th century. LaTeX
 support, for use with the LGR encoding only, is provided.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -51,23 +45,10 @@ support, for use with the LGR encoding only, is provided.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 752312
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718553
-- texlive-gfssolomos
-- texlive-gfssolomos
-- texlive-gfssolomos
-
