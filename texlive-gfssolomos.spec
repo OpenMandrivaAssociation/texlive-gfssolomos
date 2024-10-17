@@ -3,7 +3,7 @@ Version:	18651
 Release:	2
 Summary:	A Greek-alphabet font
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/greek/gfs/gfssolomos
+URL:		https://www.ctan.org/tex-archive/fonts/greek/gfs/gfssolomos
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gfssolomos.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gfssolomos.doc.r%{version}.tar.xz
